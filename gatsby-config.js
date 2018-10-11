@@ -3,6 +3,7 @@ module.exports = {
     title: 'YellowFolder v2.0 Demo',
   },
   plugins: [
+    'gatsby-plugin-netlify',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-wordpress',
