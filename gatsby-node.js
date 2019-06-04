@@ -1,7 +1,7 @@
-const path = require('path');
+const path = require('path')
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions;
+  const { createPage } = actions
   return new Promise((resolve, reject) => {
     graphql(
       `
@@ -26,8 +26,8 @@ exports.createPages = ({ graphql, actions }) => {
       `
     ).then(result => {
       if (result.errors) {
-        console.log(result.errors);
-        reject(result.errors);
+        console.log(result.errors)
+        reject(result.errors)
       }
 
       result.data.allWordpressPage.edges.forEach(({ node }) => {
@@ -37,8 +37,8 @@ exports.createPages = ({ graphql, actions }) => {
           context: {
             slug: node.slug,
           },
-        });
-      });
+        })
+      })
 
       result.data.allWordpressPost.edges.forEach(({ node }) => {
         createPage({
@@ -47,10 +47,10 @@ exports.createPages = ({ graphql, actions }) => {
           context: {
             slug: node.slug,
           },
-        });
-      });
+        })
+      })
 
-      resolve();
-    });
-  });
+      resolve()
+    })
+  })
 }

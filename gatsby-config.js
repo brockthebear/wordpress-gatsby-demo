@@ -12,7 +12,7 @@ module.exports = {
         protocol: 'http',
         hostingWPCOM: false, // whether or not this is hosted on wordpress.com.
         useACF: true, // true if using custom fields.
-      }
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,

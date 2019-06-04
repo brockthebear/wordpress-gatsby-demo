@@ -15,8 +15,8 @@ const Layout = ({ children }) => (
             title
           }
         }
-        wordpressWpApiMenusMenusItems(slug:{eq: "main-nav"}) {
-      	  items {
+        wordpressWpApiMenusMenusItems(slug: { eq: "main-nav" }) {
+          items {
             title
             object_id
             object_slug
@@ -37,7 +37,8 @@ const Layout = ({ children }) => (
         </Helmet>
         <Header
           menu={data.wordpressWpApiMenusMenusItems.items}
-          siteTitle={data.site.siteMetadata.title} />
+          siteTitle={data.site.siteMetadata.title}
+        />
         <div
           style={{
             margin: '0 auto',
